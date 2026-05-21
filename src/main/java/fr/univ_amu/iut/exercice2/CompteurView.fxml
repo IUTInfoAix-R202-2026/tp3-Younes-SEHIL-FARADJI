@@ -38,7 +38,29 @@
 -->
 
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-      prefWidth="360.0" prefHeight="220.0"/>
+     fx:controller="fr.univ_amu.iut.exercice2.CompteurController"
+     alignment="CENTER" spacing="15.0" prefWidth="300.0" prefHeight="200.0">
+
+     <padding>
+          <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+     </padding>
+
+     <Label fx:id="labelCompteur" text="0" style="-fx-font-size: 32px; -fx-font-weight: bold;" />
+
+     <HBox alignment="CENTER" spacing="20.0">
+          <Button fx:id="boutonDecrementer" text="−" onAction="#decrementer"
+               style="-fx-font-size: 16px; -fx-pref-width: 50px;" />
+          <Button fx:id="boutonIncrementer" text="+" onAction="#incrementer"
+               style="-fx-font-size: 16px; -fx-pref-width: 50px;" />
+     </HBox>
+
+     <Button fx:id="boutonReinitialiser" text="Réinitialiser" onAction="#reinitialiser" />
+
+</VBox>
